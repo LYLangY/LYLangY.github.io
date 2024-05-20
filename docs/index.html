@@ -5,9 +5,14 @@
   <title>The Echo of End</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="The Echo of End 服务器相关文档">
+  <meta name="keywords" content="The Echo of End,服务器,网易我的世界服务器,我的世界,wiki">
+  <meta name="author" content="小舒">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="shortcut icon" href="./favcion.ico" type="image/x-icon">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/style.min.css" />
 </head>
 <body>
   <div id="app">再等一会叭 马上就加载好!</div>
@@ -35,11 +40,62 @@
         pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
         pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/,
       },
+      count: {
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese',
+        isExpected: true,
+      },
+      tabs: {
+        persist: true, // default
+        sync: true, // default
+        theme: 'classic', // default
+        tabComments: true, // default
+        tabHeadings: true, // default
+        animation: 'fade',
+      },
+      copyCode: {
+        buttonText: 'Copy', // 自定义复制按钮的文本
+        errorText: 'Not Copy', // 自定义复制失败时的提示文本
+        successText: 'Copy!' // 自定义复制成功时的提示文本
+      },
+      pagination: {
+        previousText: '上一页',
+        nextText: '下一页',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      'flexible-alerts': {
+        style: 'flat',
+        note: {
+          label: "信息"
+        },
+        tip: {
+          label: "提示"
+        },
+        warning: {
+          label: "注意"
+        },
+        attention: {
+          label: "切记"
+        }
+      },
+      loadFooter: true,
+      loadFooter: '_footer.md',
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 </body>
 </html>

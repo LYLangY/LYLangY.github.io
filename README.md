@@ -18,4 +18,4 @@
 - 服务器拥有 **更多的合成配方** ,可以合成更多原版物品以及没有的物品  
 
 # 捐赠
-如果你觉得 **The Echo of End** 好玩，或者想对我微小的服务器一点资瓷，欢迎给我[捐赠](https://afdian.net/a/LangYing)
+如果你觉得 **The Echo of End** 好玩，或者想对我微小的服务器一点支持，欢迎给我[捐赠](https://afdian.net/a/LangYing)
