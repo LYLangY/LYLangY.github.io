@@ -3,7 +3,7 @@
 * 重点
 
   * [主页]()
-  * [快速开始](quickstart.md)
+  * [快速开始](./quickstart.md)
 
 * 加入我们
 

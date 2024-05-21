@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_icon.svg)
+![logo](./_icon.svg)
 
 # The Echo of End
 
