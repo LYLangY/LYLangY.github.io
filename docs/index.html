@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/docsify/themes/vue.css" />
   <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/style.min.css" />
+  <link rel="stylesheet" href="./css/Loading.css">
   <style>
     .markdown-section pre>code{
       padding: 1.2em 5px;
@@ -20,7 +21,7 @@
   </style>
 </head>
 <body>
-  <div id="app">Loading..</div>
+    <div id="app" class="loader">.</div>
   <script>
     window.$docsify = {
       el:'#app',
@@ -113,5 +114,10 @@
     };
   </script>
   <script src="https://fastly.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
