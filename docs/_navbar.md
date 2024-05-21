@@ -3,7 +3,9 @@
 * 重点
 
   * [主页]()
-  * [快速开始](./quickstart.md)
+  * [快速入门](./quickstart.md)
+  * [水分系统](./water.md)
+  * [Neomega](./Neomega.md)
 
 * 加入我们
 
