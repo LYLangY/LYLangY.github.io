@@ -1,3 +1,28 @@
+// 主控制器
+(function() {
+    // 获取URL参数
+    const params = new URLSearchParams(location.search);
+    
+    // 判断是否需要返回JSON
+    if (params.has("hex")) {
+        handleTextResponse(params);
+    }
+
+    // 处理JSON响应
+    function handleTextResponse(params) {
+    // 获取参数或生成文本内容（示例：拼接所有参数）
+    const textContent = Array.from(params.entries())
+        .map(([key, value]) => `${key}=${value}`)
+        .join('\n');
+
+    // 清空文档并强制设置 Content-Type 为 text/plain
+    document.documentElement.innerHTML = '';
+    document.open('text/plain; charset=utf-8');
+    document.write(textContent);
+    document.close();
+}
+})();
+
 // main.js
 
 let brotliInitialized;
@@ -6,8 +31,8 @@ let brotliInitialized;
 async function LoadBrotli() {
     try {
         // 使用 CDN 路径（或本地路径）
-        //const module = await import("https://unpkg.com/brotli-wasm@3.0.0/pkg.web/brotli_wasm.js");
-        const module = await import("./brotli-wasm/brotli_wasm.js");
+        const module = await import("https://unpkg.com/brotli-wasm@3.0.0/pkg.web/brotli_wasm.js");
+        //const module = await import("./brotli-wasm/brotli_wasm.js");
         await module.default(); // 等待 init() 完成
         brotliInitialized = module;
         console.log('brotli-wasm 初始化成功');
