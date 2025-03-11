@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
 		const buffer = Buffer.from(query.hex, 'hex');
 
 		// 使用 zlib 解压 Brotli 数据
-		const decompressedData = await new Promise((resolve, reject) => {
+		const bdx = await new Promise((resolve, reject) => {
 			zlib.brotliDecompress(buffer, (err, result) => {
 				if (err) reject(err);
 				else resolve(result.toString('utf8'));
