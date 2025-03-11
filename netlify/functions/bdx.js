@@ -29,13 +29,13 @@ exports.handler = async (event, context) => {
 		// 返回解压后的数据
 		return {
 			statusCode: 200,
-			data: bdx
+			body: bdx
 		};
 	} catch (err) {
 		// 捕获并返回错误
 		return {
 			statusCode: 201,
-			data: JSON.stringify({
+			body: JSON.stringify({
 				message: 'Internal Server Error',
 				error: err.message
 			}),
